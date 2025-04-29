@@ -8,18 +8,22 @@
   z-index: 1000;
   padding: 15px 0;
   transition: var(--transition);
+  background-color: white;
+}
+
+.dark-mode .header {
+  background-color: white;
 }
 
 .header.scrolled {
-  background-color: white;
+  background-color: white !important; /* Forces white in all modes */
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
 }
 
-body.dark-mode .header.scrolled {
+/* body.dark-mode .header.scrolled {
   background-color: rgba(19, 19, 35, 0.95);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .navbar {
   display: flex;
@@ -148,16 +152,16 @@ body.dark-mode .dark-mode-icon-btn {
 }
 
 .hamburger span {
+  background-color: #000 !important; /* Pure black bars */
+}
+
+.hamburger span {
   display: block;
   width: 25px;
   height: 2px;
   background-color: var(--text);
   margin: 5px 0;
   transition: var(--transition);
-}
-
-body.dark-mode .hamburger span {
-  background-color: var(--lighter);
 }
 
 .hamburger.active span:nth-child(1) {
@@ -1239,6 +1243,7 @@ body.dark-mode .solution-icon {
   --text: #333333;
   --text-light: #777777;
   --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  --background: #ffffff;
 }
 
 body {
@@ -1974,7 +1979,7 @@ body.dark-mode .hover-effect {
   }
 
   body.dark-mode .hamburger span {
-    background: var(--lighter);
+    background-color: #c2db22 !important;
   }
 
   .hamburger span:nth-child(1) {
